@@ -6,3 +6,24 @@ multiple-captures,Multiple Captures,Five moves with captures on moves 3 and 4,Te
 invalid-move,Invalid Move,Attempt an illegal move to verify UI feedback,Ensure UI handles invalid moves gracefully,Not Implemented
 king-promotion,King Promotion,Move an orange piece to the opponent's end to become a king,Verify king promotion mechanics,Not Implemented
 double-king,Double King,Move two orange pieces to the opponent's end to become kings,Verify multiple king promotions in a single game,Not Implemented
+
+
+Additional Test cases:
+We have a Checkers board that has 8 lines and each line has 8 Images. In order to differentiate each line so that we can select each line and verify if each line has 8 images or not. \
+1.	Checkers cannot move backward.
+       If users try to move it backward, we see the message ‘Please Wait
+2.	When a user clicks on restart 
+       We see the message Select an Orange piece to move
+       We can also verify that on the given board 
+       on the first div.line
+       src = ‘me1.gif’ on certain spaces for say colour Orange 
+       src = ‘you1.gif’ - This is for blue
+3.	When the first orange is moved, we can verify that we see the message ‘make a move’
+4.	We are not able to move immediately until the other player makes a move. It says ‘Please Wait’
+5.	If we do any illegal move it says - Please wait
+6.	If clicking elsewhere other than orange - Click on your orange piece, then click where you want to move it.
+7.	If trying to move horizontally - Move Diagonally only`
+8.  The restart button keeps all the checkers in its place.
+9.  The rules button exists and clicking navigates the user to a new page in a new tab and in the same browser - Improvement. Currently, the rules page is opened on the same tab and the checkers page is lost and not a good user experience. It should open in a new tab.
+
+
