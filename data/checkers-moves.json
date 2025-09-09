@@ -1,0 +1,483 @@
+{
+  "scenarios": [
+    {
+      "scenarioId": "no-capture",
+      "description": "Five straight moves without capturing a blue piece",
+      "moves": [
+        {
+          "fromLine": 6,
+          "fromImg": 4,
+          "fromName": "space42",
+          "fromSrc": "you1.gif",
+          "toLine": 5,
+          "toImg": 3,
+          "toName": "space53",
+          "toSrcBefore": "gray.gif",
+          "toSrcAfter": "you1.gif",
+          "wait": 1000,
+          "waitAfter": 3000
+        },
+        {
+          "fromLine": 6,
+          "fromImg": 6,
+          "fromName": "space22",
+          "fromSrc": "you1.gif",
+          "toLine": 5,
+          "toImg": 7,
+          "toName": "space13",
+          "toSrcBefore": "gray.gif",
+          "toSrcAfter": "you1.gif",
+          "wait": 1000,
+          "waitAfter": 3000
+        },
+        {
+          "fromLine": 7,
+          "fromImg": 5,
+          "fromName": "space31",
+          "fromSrc": "you1.gif",
+          "toLine": 6,
+          "toImg": 6,
+          "toName": "space22",
+          "toSrcBefore": "gray.gif",
+          "toSrcAfter": "you1.gif",
+          "wait": 1000,
+          "waitAfter": 3000
+        },
+        {
+          "fromLine": 7,
+          "fromImg": 3,
+          "fromName": "space51",
+          "fromSrc": "you1.gif",
+          "toLine": 6,
+          "toImg": 4,
+          "toName": "space42",
+          "toSrcBefore": "gray.gif",
+          "toSrcAfter": "you1.gif",
+          "wait": 1000,
+          "waitAfter": 3000
+        },
+        {
+          "fromLine": 6,
+          "fromImg": 2,
+          "fromName": "space62",
+          "fromSrc": "you1.gif",
+          "toLine": 5,
+          "toImg": 1,
+          "toName": "space73",
+          "toSrcBefore": "gray.gif",
+          "toSrcAfter": "you1.gif",
+          "wait": 1000,
+          "waitAfter": 3000
+        }
+      ]
+    },
+    {
+      "scenarioId": "single-capture",
+      "description": "Five moves with one capture on move 4",
+      "moves": [
+        {
+          "fromLine": 6,
+          "fromImg": 4,
+          "fromName": "space42",
+          "fromSrc": "you1.gif",
+          "toLine": 5,
+          "toImg": 3,
+          "toName": "space53",
+          "toSrcBefore": "gray.gif",
+          "toSrcAfter": "you1.gif",
+          "wait": 1000,
+          "waitAfter": 3000
+        },
+        {
+          "fromLine": 6,
+          "fromImg": 6,
+          "fromName": "space22",
+          "fromSrc": "you1.gif",
+          "toLine": 5,
+          "toImg": 7,
+          "toName": "space13",
+          "toSrcBefore": "gray.gif",
+          "toSrcAfter": "you1.gif",
+          "wait": 1000,
+          "waitAfter": 3000
+        },
+        {
+          "fromLine": 7,
+          "fromImg": 5,
+          "fromName": "space31",
+          "fromSrc": "you1.gif",
+          "toLine": 6,
+          "toImg": 6,
+          "toName": "space22",
+          "toSrcBefore": "gray.gif",
+          "toSrcAfter": "you1.gif",
+          "wait": 1000,
+          "waitAfter": 3000
+        },
+        {
+          "fromLine": 7,
+          "fromImg": 3,
+          "fromName": "space51",
+          "fromSrc": "you1.gif",
+          "toLine": 5,
+          "toImg": 5,
+          "toName": "space33",
+          "toSrcBefore": "me1.gif",
+          "toSrcAfter": "you1.gif",
+          "wait": 1000,
+          "waitAfter": 3000,
+          "checkBlueBefore": {
+            "line": 6,
+            "img": 4,
+            "name": "space42",
+            "src": "me1.gif"
+          },
+          "checkBlueAfter": {
+            "line": 6,
+            "img": 4,
+            "name": "space42",
+            "src": "gray.gif"
+          }
+        },
+        {
+          "fromLine": 6,
+          "fromImg": 2,
+          "fromName": "space62",
+          "fromSrc": "you1.gif",
+          "toLine": 5,
+          "toImg": 1,
+          "toName": "space73",
+          "toSrcBefore": "gray.gif",
+          "toSrcAfter": "you1.gif",
+          "wait": 1000,
+          "waitAfter": 3000
+        }
+      ]
+    },
+    {
+      "scenarioId": "multiple-captures",
+      "description": "Five moves with captures on moves 3 and 4",
+      "moves": [
+        {
+          "fromLine": 6,
+          "fromImg": 4,
+          "fromName": "space42",
+          "fromSrc": "you1.gif",
+          "toLine": 5,
+          "toImg": 3,
+          "toName": "space53",
+          "toSrcBefore": "gray.gif",
+          "toSrcAfter": "you1.gif",
+          "wait": 1000,
+          "waitAfter": 3000
+        },
+        {
+          "fromLine": 6,
+          "fromImg": 6,
+          "fromName": "space22",
+          "fromSrc": "you1.gif",
+          "toLine": 5,
+          "toImg": 7,
+          "toName": "space13",
+          "toSrcBefore": "gray.gif",
+          "toSrcAfter": "you1.gif",
+          "wait": 1000,
+          "waitAfter": 3000
+        },
+        {
+          "fromLine": 7,
+          "fromImg": 5,
+          "fromName": "space31",
+          "fromSrc": "you1.gif",
+          "toLine": 5,
+          "toImg": 7,
+          "toName": "space13",
+          "toSrcBefore": "me1.gif",
+          "toSrcAfter": "you1.gif",
+          "wait": 1000,
+          "waitAfter": 3000,
+          "checkBlueBefore": {
+            "line": 6,
+            "img": 6,
+            "name": "space22",
+            "src": "me1.gif"
+          },
+          "checkBlueAfter": {
+            "line": 6,
+            "img": 6,
+            "name": "space22",
+            "src": "gray.gif"
+          }
+        },
+        {
+          "fromLine": 7,
+          "fromImg": 3,
+          "fromName": "space51",
+          "fromSrc": "you1.gif",
+          "toLine": 5,
+          "toImg": 5,
+          "toName": "space33",
+          "toSrcBefore": "me1.gif",
+          "toSrcAfter": "you1.gif",
+          "wait": 1000,
+          "waitAfter": 3000,
+          "checkBlueBefore": {
+            "line": 6,
+            "img": 4,
+            "name": "space42",
+            "src": "me1.gif"
+          },
+          "checkBlueAfter": {
+            "line": 6,
+            "img": 4,
+            "name": "space42",
+            "src": "gray.gif"
+          }
+        },
+        {
+          "fromLine": 6,
+          "fromImg": 2,
+          "fromName": "space62",
+          "fromSrc": "you1.gif",
+          "toLine": 5,
+          "toImg": 1,
+          "toName": "space73",
+          "toSrcBefore": "gray.gif",
+          "toSrcAfter": "you1.gif",
+          "wait": 1000,
+          "waitAfter": 3000
+        }
+      ]
+    },
+    {
+      "scenarioId": "invalid-move",
+      "description": "Attempt an illegal move to verify UI feedback",
+      "moves": [
+        {
+          "fromLine": 6,
+          "fromImg": 4,
+          "fromName": "space42",
+          "fromSrc": "you1.gif",
+          "toLine": 4,
+          "toImg": 3,
+          "toName": "space64",
+          "toSrcBefore": "gray.gif",
+          "toSrcAfter": "gray.gif",
+          "wait": 1000,
+          "waitAfter": 3000,
+          "isInvalid": true
+        }
+      ]
+    },
+    {
+      "scenarioId": "king-promotion",
+      "description": "Move an orange piece to the opponent's end to become a king",
+      "moves": [
+        {
+          "fromLine": 6,
+          "fromImg": 4,
+          "fromName": "space42",
+          "fromSrc": "you1.gif",
+          "toLine": 5,
+          "toImg": 3,
+          "toName": "space53",
+          "toSrcBefore": "gray.gif",
+          "toSrcAfter": "you1.gif",
+          "wait": 1000,
+          "waitAfter": 3000
+        },
+        {
+          "fromLine": 5,
+          "fromImg": 3,
+          "fromName": "space53",
+          "fromSrc": "you1.gif",
+          "toLine": 4,
+          "toImg": 2,
+          "toName": "space64",
+          "toSrcBefore": "gray.gif",
+          "toSrcAfter": "you1.gif",
+          "wait": 1000,
+          "waitAfter": 3000
+        },
+        {
+          "fromLine": 4,
+          "fromImg": 2,
+          "fromName": "space64",
+          "fromSrc": "you1.gif",
+          "toLine": 3,
+          "toImg": 3,
+          "toName": "space75",
+          "toSrcBefore": "gray.gif",
+          "toSrcAfter": "you1.gif",
+          "wait": 1000,
+          "waitAfter": 3000
+        },
+        {
+          "fromLine": 3,
+          "fromImg": 3,
+          "fromName": "space75",
+          "fromSrc": "you1.gif",
+          "toLine": 2,
+          "toImg": 2,
+          "toName": "space86",
+          "toSrcBefore": "gray.gif",
+          "toSrcAfter": "you1.gif",
+          "wait": 1000,
+          "waitAfter": 3000
+        },
+        {
+          "fromLine": 2,
+          "fromImg": 2,
+          "fromName": "space86",
+          "fromSrc": "you1.gif",
+          "toLine": 1,
+          "toImg": 1,
+          "toName": "space97",
+          "toSrcBefore": "gray.gif",
+          "toSrcAfter": "you2.gif",
+          "wait": 1000,
+          "waitAfter": 3000,
+          "isKing": true
+        }
+      ]
+    },
+    {
+      "scenarioId": "double-king",
+      "description": "Move two orange pieces to the opponent's end to become kings",
+      "moves": [
+        {
+          "fromLine": 6,
+          "fromImg": 4,
+          "fromName": "space42",
+          "fromSrc": "you1.gif",
+          "toLine": 5,
+          "toImg": 3,
+          "toName": "space53",
+          "toSrcBefore": "gray.gif",
+          "toSrcAfter": "you1.gif",
+          "wait": 1000,
+          "waitAfter": 3000
+        },
+        {
+          "fromLine": 5,
+          "fromImg": 3,
+          "fromName": "space53",
+          "fromSrc": "you1.gif",
+          "toLine": 4,
+          "toImg": 2,
+          "toName": "space64",
+          "toSrcBefore": "gray.gif",
+          "toSrcAfter": "you1.gif",
+          "wait": 1000,
+          "waitAfter": 3000
+        },
+        {
+          "fromLine": 4,
+          "fromImg": 2,
+          "fromName": "space64",
+          "fromSrc": "you1.gif",
+          "toLine": 3,
+          "toImg": 3,
+          "toName": "space75",
+          "toSrcBefore": "gray.gif",
+          "toSrcAfter": "you1.gif",
+          "wait": 1000,
+          "waitAfter": 3000
+        },
+        {
+          "fromLine": 3,
+          "fromImg": 3,
+          "fromName": "space75",
+          "fromSrc": "you1.gif",
+          "toLine": 2,
+          "toImg": 2,
+          "toName": "space86",
+          "toSrcBefore": "gray.gif",
+          "toSrcAfter": "you1.gif",
+          "wait": 1000,
+          "waitAfter": 3000
+        },
+        {
+          "fromLine": 2,
+          "fromImg": 2,
+          "fromName": "space86",
+          "fromSrc": "you1.gif",
+          "toLine": 1,
+          "toImg": 1,
+          "toName": "space97",
+          "toSrcBefore": "gray.gif",
+          "toSrcAfter": "you2.gif",
+          "wait": 1000,
+          "waitAfter": 3000,
+          "isKing": true
+        },
+        {
+          "fromLine": 6,
+          "fromImg": 2,
+          "fromName": "space62",
+          "fromSrc": "you1.gif",
+          "toLine": 5,
+          "toImg": 1,
+          "toName": "space73",
+          "toSrcBefore": "gray.gif",
+          "toSrcAfter": "you1.gif",
+          "wait": 1000,
+          "waitAfter": 3000
+        },
+        {
+          "fromLine": 5,
+          "fromImg": 1,
+          "fromName": "space73",
+          "fromSrc": "you1.gif",
+          "toLine": 4,
+          "toImg": 2,
+          "toName": "space64",
+          "toSrcBefore": "gray.gif",
+          "toSrcAfter": "you1.gif",
+          "wait": 1000,
+          "waitAfter": 3000
+        },
+        {
+          "fromLine": 4,
+          "fromImg": 2,
+          "fromName": "space64",
+          "fromSrc": "you1.gif",
+          "toLine": 3,
+          "toImg": 3,
+          "toName": "space75",
+          "toSrcBefore": "gray.gif",
+          "toSrcAfter": "you1.gif",
+          "wait": 1000,
+          "waitAfter": 3000
+        },
+        {
+          "fromLine": 3,
+          "fromImg": 3,
+          "fromName": "space75",
+          "fromSrc": "you1.gif",
+          "toLine": 2,
+          "toImg": 4,
+          "toName": "space86",
+          "toSrcBefore": "gray.gif",
+          "toSrcAfter": "you1.gif",
+          "wait": 1000,
+          "waitAfter": 3000
+        },
+        {
+          "fromLine": 2,
+          "fromImg": 4,
+          "fromName": "space86",
+          "fromSrc": "you1.gif",
+          "toLine": 1,
+          "toImg": 3,
+          "toName": "space97",
+          "toSrcBefore": "gray.gif",
+          "toSrcAfter": "you2.gif",
+          "wait": 1000,
+          "waitAfter": 3000,
+          "isKing": true
+        }
+      ]
+    }
+  ]
+}
