@@ -1,0 +1,8 @@
+//This file will also have test cases/scenarios etc., 
+Scenario ID,Scenario Name,Description,Purpose,Status
+no-capture,No Capture,Five straight moves without capturing a blue piece,Verify basic move functionality without captures,Not Implemented
+single-capture,Single Capture,Five moves with one capture on move 4,Verify capture mechanics and UI feedback,Implemented
+multiple-captures,Multiple Captures,Five moves with captures on moves 3 and 4,Test multiple capture scenarios,Not Implemented
+invalid-move,Invalid Move,Attempt an illegal move to verify UI feedback,Ensure UI handles invalid moves gracefully,Not Implemented
+king-promotion,King Promotion,Move an orange piece to the opponent's end to become a king,Verify king promotion mechanics,Not Implemented
+double-king,Double King,Move two orange pieces to the opponent's end to become kings,Verify multiple king promotions in a single game,Not Implemented
