@@ -1,0 +1,78 @@
+# Azure Pipelines configuration for running Playwright UI tests and publishing JUnit reports
+trigger:
+  - main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '18.x'
+    displayName: 'Install Node.js'
+
+  - script: |
+      npm install
+    displayName: 'Install dependencies'
+
+  - script: |
+      npx playwright install --with-deps
+    displayName: 'Install Playwright browsers'
+
+  - script: |
+      mkdir -p test-results
+      npm run test:dev
+    displayName: 'Run Playwright tests (dev)'
+    env:
+      HOST_URL: $(HOST_URL_DEV)
+      AUTH_URL: $(AUTH_URL_DEV)
+      USER1_PASSWORD: $(USER1_PASSWORD_DEV)
+      USER2_PASSWORD: $(USER2_PASSWORD_DEV)
+      JWT_SECRET: $(JWT_SECRET_DEV)
+
+  - task: PublishTestResults@2
+    inputs:
+      testResultsFormat: 'JUnit'
+      testResultsFiles: 'test-results/junit.xml'
+      mergeTestResults: true
+      failTaskOnFailedTests: true
+      testRunTitle: 'Checkers UI Tests - Dev'
+    displayName: 'Publish dev test results'
+    condition: always()
+
+  - script: |
+      mkdir -p test-results
+      npm run test:prod
+    displayName: 'Run Playwright tests (prod)'
+    env:
+      HOST_URL: $(HOST_URL_PROD)
+      AUTH_URL: $(AUTH_URL_PROD)
+      USER1_PASSWORD: $(USER1_PASSWORD_PROD)
+      USER2_PASSWORD: $(USER2_PASSWORD_PROD)
+      JWT_SECRET: $(JWT_SECRET_PROD)
+
+  - task: PublishTestResults@2
+    inputs:
+      testResultsFormat: 'JUnit'
+      testResultsFiles: 'test-results/junit.xml'
+      mergeTestResults: true
+      failTaskOnFailedTests: true
+      testRunTitle: 'Checkers UI Tests - Prod'
+    displayName: 'Publish prod test results'
+    condition: always()
+
+  - task: PublishPipelineArtifact@1
+    inputs:
+      targetPath: 'test-cases.csv'
+      artifact: 'test-cases'
+      publishLocation: 'pipeline'
+    displayName: 'Publish test-cases.csv as artifact'
+    condition: always()
+
+  - task: PublishPipelineArtifact@1
+    inputs:
+      targetPath: 'suggestions.csv'
+      artifact: 'suggestions'
+      publishLocation: 'pipeline'
+    displayName: 'Publish suggestions.csv as artifact'
+    condition: always()
