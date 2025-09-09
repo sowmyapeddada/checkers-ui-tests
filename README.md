@@ -52,10 +52,6 @@ Configure Environment Variables:
 Copy .env.dev and .env.prod to set up environment-specific configurations.
 Update .env.prod with your actual production UI URLs and credentials if available.
 Example .env.dev:HOST_URL=https://www.gamesforthebrain.com/game/checkers/
-AUTH_URL=https://www.gamesforthebrain.com/login
-USER1_PASSWORD=password123
-USER2_PASSWORD=password456
-JWT_SECRET=mock-secret
 
 
 
