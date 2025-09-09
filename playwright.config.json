@@ -1,0 +1,32 @@
+require('dotenv').config({ path: `.env.${process.env.ENV || 'dev'}` });
+
+module.exports = {
+  projects: [
+    {
+      name: 'dev',
+      use: {
+        baseURL: process.env.HOST_URL || 'https://www.gamesforthebrain.com/game/checkers/',
+        browserName: 'chromium',
+        screenshot: 'only-on-failure',
+        video: 'retain-on-failure'
+      },
+    },
+    {
+      name: 'prod',
+      use: {
+        baseURL: process.env.HOST_URL || 'https://prod-checkers-ui.com',
+        browserName: 'chromium',
+        screenshot: 'only-on-failure',
+        video: 'retain-on-failure'
+      },
+    },
+  ],
+  testDir: './tests',
+  timeout: 60000,
+  retries: 1,
+  reporter: [
+    ['list'],
+    ['json', { outputFile: 'test-results/test-results.json' }],
+    ['junit', { outputFile: 'test-results/junit.xml' }]
+  ],
+};
